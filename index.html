@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/4634c0cfb0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-12">
+                <div class="heading text-center pt-3">
+                    <h1>
+                        Product Managment System
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form">
+                    <div class="name my-4">
+                        <label for="name">Product name</label>
+                        <input required id="name" type="text" class="form-control" placeholder="Product Name" name="name"/>
+                    </div>
+
+                    <div class="price my-4">
+                        <label for="price">Product price</label>
+                        <input required id="price" type="number" class="form-control" placeholder="Product Price" name="price"/>
+                    </div>
+
+                    <div class="desc my-4">
+                        <label for="desc">Product short description</label>
+                        <input required id="desc" type="text" class="form-control" placeholder="Product Short Description" name="desc"/>
+                    </div>
+
+                    <div class="category my-4">  
+                        <select required name="category" id="category"class="form-control">
+                            <option value="" disabled selected hidden>Product Category</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="clothes">Clothes</option>
+                            <option value="toys">Toys</option>
+                            <option value="furniture">Furniture</option>
+                        </select>
+                    </div>
+
+                    <div class="img my-4">
+                        <p class="m-0 px-2">Product Image:</p>
+                        <input required type="file" id="img" name="img" accept="image/*" class="form-control">
+                    </div>
+
+                    <div class="d-none error bg-danger text-center p-2 mb-2 text-white rounded"></div>
+
+                    <button id="product-btn" class="btn btn-primary w-100 mb-3">Add Product</button>
+                
+                    <div class="success-add d-none bg-success p-2 mb-2 text-center text-white rounded">Product is added successfully.</div>
+                </div>
+            </div>
+            <div class="col-12 bg mb-4">
+                <div class="products">
+                    <div class="table-responsive">
+                        <table class="table align-middle table-hover my-2">
+                            <thead>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Description</th>
+                                <th>Category</th>
+                                <th>Image</th>
+                                <th>Delete</th>
+                                <th>Update</th>
+                            </thead>
+                            <tbody>
+    
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <button id="delete-all-btn" class="d-none btn btn-danger w-100 my-3">Delete All Products</button>
+                    
+                    <div class="overlay">
+                        <div class="overlay-img bg-dark">
+                            <img alt="">
+                        </div>
+                        <div class="close-div w-100 h-100 position-absolute">
+                            <div class="close-img w-100 h-100 p-2">
+                                <i class="m-4 fa-2x fa-solid fa-rectangle-xmark"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>            
+        </div>
+    
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
